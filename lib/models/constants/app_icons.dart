@@ -30,7 +30,7 @@ class AppIcons {
   static const IconData player_eq_display = IconData(0xe815, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData share = IconData(0xe817, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData star = IconData(0xe818, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData union_2 = IconData(0xe819, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData plus = IconData(0xe819, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData music = IconData(0xe81a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData paint = IconData(0xe81b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData repeat = IconData(0xe81c, fontFamily: _kFontFam, fontPackage: _kFontPkg);

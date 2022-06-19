@@ -13,4 +13,9 @@ class AppStrings {
   static const String homeScreenFirstText = 'Search album song';
   static const String homeScreenSecondText = 'Hot Recommended';
   static const String homeScreenThirdText = 'Sound of Sky';
+
+  //bottom navigation bar texts
+  static const String firstText = 'Home';
+  static const String secondText = 'Songs';
+  static const String thirdText = 'Settings';
 }

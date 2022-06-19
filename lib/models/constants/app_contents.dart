@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 
 class AppContents{
 
+  //main app PageView() controller
+  static PageController mainPageViewController = PageController(
+    initialPage : 0,
+  );
+
   //scalePageTransition method
   static PageRouteBuilder scalePageTransition({
     required Widget page,
