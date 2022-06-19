@@ -1,0 +1,42 @@
+name: music_app
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.5.2
+  device_preview: ^1.0.0
+  pull_to_refresh: ^2.0.0
+  flutter_bloc: ^8.0.1
+  http: ^0.13.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: AppIcons
+      fonts:
+        - asset: assets/icons/AppIcons.ttf
+
+    - family: Circular
+      fonts:
+        - asset: assets/fonts/FontsFree-Net-Circular-Std-Medium.ttf
+          weight: 700
+
+
