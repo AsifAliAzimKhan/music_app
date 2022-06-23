@@ -17,6 +17,36 @@ final kBottomNavBarTextStyle = TextStyle(
   fontSize: 10.sp,
 );
 
+final kHomeScreenSearchBarText = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 13.sp,
+  color: AppColors.greyThree,
+);
+
+final kHomeHotRecommendedCardTittle = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 13.sp,
+  color: AppColors.greyFour,
+);
+
+final kHomeHotRecommendedCardSubtitle = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 10.sp,
+  color: AppColors.greyFive ,
+);
+
+final kHomeViewAllText = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 11.sp,
+  color: AppColors.iconStartColor ,
+);
+
+const kSearchBarTextStyle =  TextStyle(
+fontFamily: 'Circular',
+color: AppColors.white,
+fontWeight: FontWeight.w100,
+);
+
 const kSimpleIconStyle = LinearGradient(
   colors: [
     AppColors.greyOne,
@@ -46,3 +76,9 @@ const kGradientTextStyle =  LinearGradient(
     AppColors.iconEndColor,
   ],
 );
+
+ final kHomeFirstTextStyle = TextStyle(
+   fontFamily: 'Circular',
+   fontSize: 15.sp,
+   color: AppColors.white,
+ );

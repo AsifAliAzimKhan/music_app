@@ -13,7 +13,7 @@ class AppContents{
     required Widget page,
   }){
     return PageRouteBuilder(
-      transitionDuration: const Duration(seconds: 1),
+      transitionDuration: const Duration(seconds: 2),
       transitionsBuilder: (context, animation, animationTime, child){
         animation = CurvedAnimation(
             parent: animation, curve: Curves.easeInOut

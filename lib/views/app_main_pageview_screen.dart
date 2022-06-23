@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:music_app/models/constants/app_contents.dart';
+import 'package:music_app/views/home_views/home_screens.dart';
 import 'package:music_app/views/utils/bottom_navigation_bar.dart';
 
 import '../controllers/cubits/app_page_view_cubit.dart';
@@ -27,16 +28,7 @@ class AppMainPageViewScreen extends StatelessWidget {
                   controller: AppContents.mainPageViewController,
                   physics: const NeverScrollableScrollPhysics(),
                   children: [
-                    Container(
-                      height: 1.sh,
-                      width: 1.sw,
-                      color: Colors.grey[100],
-                      child: Center(
-                        child: Text(
-                          'Home Screen',
-                        ),
-                      ),
-                    ),
+                    const HomeScreen(),
                     Container(
                       height: 1.sh,
                       width: 1.sw,
