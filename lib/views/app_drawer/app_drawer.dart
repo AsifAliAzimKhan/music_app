@@ -1,34 +1,31 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:music_app/models/constants/app_colors.dart';
 import 'package:music_app/models/constants/app_icons.dart';
 import 'package:music_app/models/constants/app_strings.dart';
 import 'package:music_app/models/constants/app_text_styles.dart';
-import 'package:music_app/views/setting_views/settings_custom_widgets/settings_screen_custom_appbar.dart';
+import 'package:music_app/views/app_drawer/app_drawer_custom_widgets/drawer_app_bar.dart';
 import 'package:music_app/views/utils/gradient_icon.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+class AppDrawer extends StatelessWidget {
+  const AppDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        color: AppColors.themeBlack,
+      child: Drawer(
+        backgroundColor: AppColors.themeBlack,
         child: ListView(
-          padding: EdgeInsets.only(
-            left: 20.sp,
-            bottom: 20.sp,
-          ),
+          padding: EdgeInsets.zero,
+          shrinkWrap: true,
+          physics: const BouncingScrollPhysics(),
           children: [
-            SizedBox(height: 15.sp),
-            const SettingsScreenCustomAppBar(),
-            SizedBox(height: 34.sp),
+            const DrawerAppBar(),
+            SizedBox(height: 10.sp),
             Container(
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 20.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -36,18 +33,18 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: Icons.featured_play_list,
+                    icon: AppIcons.paint,
                     size: 24.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 25.0.sp,
+                    width: 10.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenFirstText,
+                        AppStrings.drawerEighthText,
                         style: kDrawerFirstText,
                       ),
                     ),
@@ -57,19 +54,19 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 57.sp,
-                right: 20.sp,
+                left: 60.sp,
+                right: 8.sp,
               ),
               child: Divider(
                 color: AppColors.greySix,
                 thickness: 1.sp,
               ),
             ),
-            SizedBox(height: 5.sp),
             Container(
+              // color: Colors.red,
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 25.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -77,18 +74,18 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: Icons.multitrack_audio,
-                    size: 24.0.sp,
+                    icon: AppIcons.scissors,
+                    size: 18.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 25.0.sp,
+                    width: 15.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenSecondText,
+                        AppStrings.drawerNinthText,
                         style: kDrawerFirstText,
                       ),
                     ),
@@ -98,19 +95,19 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 57.sp,
-                right: 20.sp,
+                left: 60.sp,
+                right: 8.sp,
               ),
               child: Divider(
                 color: AppColors.greySix,
                 thickness: 1.sp,
               ),
             ),
-            SizedBox(height: 5.sp),
             Container(
+              // color: Colors.red,
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 20.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -118,18 +115,59 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: AppIcons.headphones,
+                    icon: Icons.timer,
+                    size: 22.0.sp,
+                    gradient: kGradientTextStyle,
+                  ),
+                  SizedBox(
+                    width: 18.0.sp,
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: FittedBox(
+                      child: Text(
+                        AppStrings.drawerTenthText,
+                        style: kDrawerFirstText,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 60.sp,
+                right: 8.sp,
+              ),
+              child: Divider(
+                color: AppColors.greySix,
+                thickness: 1.sp,
+              ),
+            ),
+            Container(
+              // color: Colors.red,
+              height: 40.5.sp,
+              width: 1.sw,
+              padding: EdgeInsets.only(left: 25.sp),
+              child: ListView(
+                shrinkWrap: true,
+                padding: EdgeInsets.zero,
+                physics: const NeverScrollableScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                children: [
+                  GradientIcon(
+                    icon: AppIcons.sound_bars,
                     size: 20.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 28.0.sp,
+                    width: 15.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenThirdText,
+                        AppStrings.drawerEleventhText,
                         style: kDrawerFirstText,
                       ),
                     ),
@@ -139,19 +177,19 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 57.sp,
-                right: 20.sp,
+                left: 60.sp,
+                right: 8.sp,
               ),
               child: Divider(
                 color: AppColors.greySix,
                 thickness: 1.sp,
               ),
             ),
-            SizedBox(height: 5.sp),
             Container(
+              // color: Colors.red,
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 25.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -159,18 +197,18 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: AppIcons.padlock,
-                    size: 20.0.sp,
+                    icon: Icons.drive_eta,
+                    size: 22.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 28.0.sp,
+                    width: 15.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenFourthText,
+                        AppStrings.drawerTwelveText,
                         style: kDrawerFirstText,
                       ),
                     ),
@@ -180,19 +218,19 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 57.sp,
-                right: 20.sp,
+                left: 60.sp,
+                right: 8.sp,
               ),
               child: Divider(
                 color: AppColors.greySix,
                 thickness: 1.sp,
               ),
             ),
-            SizedBox(height: 5.sp),
             Container(
+              // color: Colors.red,
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 25.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -200,18 +238,18 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: Icons.menu_open,
-                    size: 26.0.sp,
+                    icon: Icons.folder_copy,
+                    size: 22.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 20.0.sp,
+                    width: 15.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenFifthText,
+                        AppStrings.drawerThirteenthText,
                         style: kDrawerFirstText,
                       ),
                     ),
@@ -221,19 +259,19 @@ class SettingsScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: 57.sp,
-                right: 20.sp,
+                left: 60.sp,
+                right: 8.sp,
               ),
               child: Divider(
                 color: AppColors.greySix,
                 thickness: 1.sp,
               ),
             ),
-            SizedBox(height: 5.sp),
             Container(
+              // color: Colors.red,
               height: 40.5.sp,
               width: 1.sw,
-              padding: EdgeInsets.only(left: 5.sp),
+              padding: EdgeInsets.only(left: 25.sp),
               child: ListView(
                 shrinkWrap: true,
                 padding: EdgeInsets.zero,
@@ -241,23 +279,33 @@ class SettingsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   GradientIcon(
-                    icon: AppIcons.settings,
-                    size: 20.0.sp,
+                    icon: Icons.scanner,
+                    size: 22.0.sp,
                     gradient: kGradientTextStyle,
                   ),
                   SizedBox(
-                    width: 28.0.sp,
+                    width: 15.0.sp,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: FittedBox(
                       child: Text(
-                        AppStrings.settingsScreenSixthText,
+                        AppStrings.drawerFourteenthText,
                         style: kDrawerFirstText,
                       ),
                     ),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 60.sp,
+                right: 8.sp,
+              ),
+              child: Divider(
+                color: AppColors.greySix,
+                thickness: 1.sp,
               ),
             ),
           ],

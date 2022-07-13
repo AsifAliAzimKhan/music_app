@@ -11,6 +11,18 @@ final kSplashScreenFirstText = TextStyle(
   color: AppColors.white,
 );
 
+final kDrawerFirstText = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 14.sp,
+  color: AppColors.white,
+);
+
+final kDrawerAppBarTitleText = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 12.sp,
+  color: AppColors.white,
+);
+
 final kBottomNavBarTextStyle = TextStyle(
   fontFamily: 'Circular',
   color: AppColors.greyOne,
@@ -82,3 +94,10 @@ const kGradientTextStyle =  LinearGradient(
    fontSize: 15.sp,
    color: AppColors.white,
  );
+
+final kSettingScreenTitleTextStyle = TextStyle(
+  fontFamily: 'Circular',
+  fontSize: 18.sp,
+  fontWeight: FontWeight.normal,
+  color: AppColors.white,
+);

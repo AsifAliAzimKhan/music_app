@@ -5,8 +5,8 @@ import 'package:music_app/models/constants/app_strings.dart';
 import 'package:music_app/models/constants/app_text_styles.dart';
 import 'package:music_app/views/utils/app_properties.dart';
 
-class HomeScreenAppBar extends StatelessWidget {
-  const HomeScreenAppBar({Key? key}) : super(key: key);
+class SettingsScreenCustomAppBar extends StatelessWidget {
+  const SettingsScreenCustomAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class HomeScreenAppBar extends StatelessWidget {
               width: 25.8.sp,
               child: Icon(
                 Icons.menu_sharp,
-                size: 26.sp,
+                size: 30.sp,
                 color: AppColors.greyTwo,
               ),
             ),
@@ -37,27 +37,14 @@ class HomeScreenAppBar extends StatelessWidget {
           SizedBox(
             width: 25.sp,
           ),
-          SizedBox(
+          Container(
             height: 27.sp,
             width: 0.75.sw,
-            child: TextFormField(
-              cursorColor: AppColors.white,
-              style: kSearchBarTextStyle,
-              decoration: InputDecoration(
-                prefixIcon: Icon(
-                  Icons.search_rounded,
-                  color: AppColors.greyThree,
-                  size: 18.sp,
-                ),
-                hintText: AppStrings.homeScreenFirstText,
-                hintStyle: kHomeScreenSearchBarText,
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(50.0.sp),
-                ),
-                filled: true,
-                fillColor: AppColors.searchTextField,
-                contentPadding: EdgeInsets.zero,
+            alignment: Alignment.center,
+            child: FittedBox(
+              child: Text(
+                AppStrings.settingsScreenTittle,
+                style: kSettingScreenTitleTextStyle,
               ),
             ),
           ),
